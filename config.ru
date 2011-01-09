@@ -3,4 +3,4 @@ require 'bundler'
 Bundler.require
 
 require './redir'
-run Toe
+run Redir
