@@ -1,5 +1,6 @@
 class Redir < Sinatra::Base
   get '/' do
-    redirect "http://localhost:3000"
+    querystring = params.map{|k,v| "#{CGI.escape(k)}=#{CGI.escape(v)}"}.join("&")
+    redirect "http://localhost:3000?#{querystring}"
   end
 end
